@@ -1,6 +1,6 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import SignUp from './components/SignUp.Jsx';
+import SignUp from './components/SignUp.jsx';
 import './components/login.css'; 
 
 function Page() {
