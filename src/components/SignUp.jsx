@@ -21,9 +21,19 @@ export default function SignUp() {
   };
 
   return (
-    <div className="min-h-screen bg-[#ddfffe] grid place-content-center font-['Poppins']">
-      <div className="relative w-[850px] h-[500px] bg-white shadow-[25px_30px_55px_rgba(85,85,85,0.4)] rounded-[13px] overflow-hidden">
-        {/* Sign Up Form */}
+    <div
+      className="min-h-screen bg-[#ddfffe] grid place-content-center font-['Poppins'] relative"
+      style={{
+        backgroundImage: `url(/logbac.jpg)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* Overlay for opacity - Increased to 50% */}
+      <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+
+      <div className="relative w-[850px] h-[500px] bg-white shadow-[25px_30px_55px_rgba(85,85,85,0.4)] rounded-[13px] overflow-hidden z-10">
         <div
           className={`absolute w-[60%] h-full p-[0_40px] transition-all duration-600 ease-in-out 
           ${isRightPanelActive ? 'translate-x-[66.7%] opacity-100 z-[5]' : 'opacity-0 z-[1]'}`}
@@ -43,7 +53,6 @@ export default function SignUp() {
           </form>
         </div>
 
-        {/* Sign In Form */}
         <div
           className={`absolute w-[60%] h-full p-[0_40px] transition-all duration-600 ease-in-out z-[2]
           ${isRightPanelActive ? 'opacity-0 z-0 pointer-events-none' : ''}`}
@@ -64,7 +73,6 @@ export default function SignUp() {
           </form>
         </div>
 
-        {/* Overlay Container */}
         <div
           className={`absolute top-0 left-[60%] w-[40%] h-full overflow-hidden transition-transform duration-600 ease-in-out z-[9]
           ${isRightPanelActive ? '-translate-x-[150%]' : ''}`}
@@ -74,7 +82,6 @@ export default function SignUp() {
             transition-transform duration-600 ease-in-out
             ${isRightPanelActive ? 'translate-x-[50%]' : ''}`}
           >
-            {/* Left Overlay Panel */}
             <div
               className={`absolute flex items-center justify-center flex-col p-[0_40px] text-center h-full w-[340px] 
               transition-transform duration-600 ease-in-out right-[60%] -translate-x-[12%]
@@ -92,7 +99,6 @@ export default function SignUp() {
               </button>
             </div>
 
-            {/* Right Overlay Panel */}
             <div
               className={`absolute flex items-center justify-center flex-col p-[0_40px] text-center h-full w-[340px] 
               transition-transform duration-600 ease-in-out right-0
